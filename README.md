@@ -31,12 +31,8 @@ a. Actualizar la Ruta del Archivo CSV
 Abre el archivo mysql_code.txt y actualiza la ruta a tu archivo CSV en el comando LOAD DATA INFILE.
 
 b. Ejecutar el Script de Configuración de la Base de Datos
-Ejecuta el script de configuración proporcionado para crear la base de datos y cargar los datos. Asegúrate de que MySQL esté ejecutándose y sea accesible:
+Ejecuta los codigos en el archivo en los querys de MySQL. Asegúrate de que MySQL esté ejecutándose y sea accesible:
 
-```bash
-Copy code
-bash scripts/setup_db.sh
-```
 4. Ejecutar el Jupyter Notebook
 Inicia Jupyter Notebook y abre el notebook del proyecto:
 
@@ -50,11 +46,11 @@ data/csv_db_incendios_forestales.csv: El conjunto de datos utilizado en este pro
 mysql_code.txt: Código SQL para crear la base de datos y cargar los datos.
 notebooks/Proyecto Bases de Datos.ipynb: Jupyter Notebook con el análisis de datos.
 requirements.txt: Lista de paquetes de Python requeridos.
-scripts/setup_db.sh: Script para configurar la base de datos.
+
 Resolución de Problemas
 Problemas de Conexión a la Base de Datos: Asegúrate de que MySQL esté ejecutándose y que los detalles de conexión en los scripts coincidan con tu configuración de MySQL.
 Ruta del Archivo CSV: Verifica que la ruta al archivo CSV en mysql_code.txt sea correcta.
 Dependencias: Asegúrate de que todas las dependencias estén instaladas a través de requirements.txt.
+
 Notas Adicionales
-Este proyecto asume un sistema operativo tipo Unix para los scripts de shell. Puede ser necesario realizar ajustes para entornos Windows.
 Asegúrate de que el archivo CSV utilice el delimitador correcto (;) y esté correctamente formateado.
