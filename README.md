@@ -40,6 +40,13 @@ Inicia Jupyter Notebook y abre el notebook del proyecto:
 jupyter notebook notebooks/Proyecto Bases de Datos.ipynb
 ```
 Sigue las instrucciones dentro del notebook para realizar el análisis de datos.
+En caso de no funcionar, el note book se puede descargar:
+-Primero, haz clic en Raw.
+-Luego, presiona Ctrl + S para guardar el archivo como .ipynb. (Asegúrate de agregar manualmente .ipynb al final del nombre del archivo, ya que los archivos de GitHub se guardan como archivos de texto por defecto).
+-Abre Jupyter Notebook.
+-Navega hasta la ubicación donde guardaste el archivo .ipynb.
+-Abre el archivo y verás el código.
+
 
 ### Descripción de los Archivos
 data/csv_db_incendios_forestales.csv: El conjunto de datos utilizado en este proyecto.
