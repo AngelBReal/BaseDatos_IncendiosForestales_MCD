@@ -1,0 +1,37 @@
+-- Create the database
+CREATE DATABASE IF NOT EXISTS `db_incendios_forestales1` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+-- Select the database
+USE `db_incendios_forestales1`;
+
+-- Create the table
+CREATE TABLE IF NOT EXISTS `bd_incendiossnif_2015-2023` (
+  `Año` INT DEFAULT NULL,
+  `Clave_del_incendio` TEXT,
+  `Latitud` DOUBLE DEFAULT NULL,
+  `Longitud` DOUBLE DEFAULT NULL,
+  `Clave_Municipio` INT DEFAULT NULL,
+  `Estado` TEXT,
+  `Municipio` TEXT,
+  `Región` TEXT,
+  `Predio` TEXT,
+  `Causa` TEXT,
+  `Fecha_Inicio` DATE DEFAULT NULL,
+  `Fecha_Termino` DATE DEFAULT NULL,
+  `Tipo_de_incendio` TEXT,
+  `Tipo_impacto` TEXT,
+  `Total_hectáreas` DOUBLE DEFAULT NULL,
+  `Tamaño` TEXT,
+  `Detección` TEXT,
+  `Llegada` TEXT,
+  `Duración` TEXT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Load data from the CSV file into the table
+LOAD DATA INFILE '/path/to/your/csv/file.csv'
+INTO TABLE `bd_incendiossnif_2015-2023`
+FIELDS TERMINATED BY ';' -- Correct delimiter
+ENCLOSED BY '"' -- Assuming fields are enclosed by double quotes
+LINES TERMINATED BY '\n' -- Assuming each line ends with a newline character
+IGNORE 1 LINES -- Assuming the first line is the header
+(`Año`, `Clave_del_incendio`, `Latitud`, `Longitud`, `Clave_Municipio`, `Estado`, `Municipio`, `Región`, `Predio`, `Causa`, `Fecha_Inicio`, `Fecha_Termino`, `Tipo_de_incendio`, `Tipo_impacto`, `Total_hectáreas`, `Tamaño`, `Detección`, `Llegada`, `Duración`);
